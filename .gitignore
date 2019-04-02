@@ -1,0 +1,6 @@
+lib/.env
+lib/__pycache__/
+.DS_Store
+.cache-*
+.env
+__pycache__/
