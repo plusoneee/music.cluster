@@ -1,0 +1,13 @@
+id,name,artists,time_signature,tempo,valence,liveness,instrumentalness,acousticness,speechiness,mode,loudness,key,energy,danceability
+7vCoBmMOnP2pw986X72zyl,Freedom,Colde,4,105.022,0.509,0.213,0,0.614,0.0971,0,-5.843,11,0.705,0.83
+030eWXSRIGEvmX2zLDIj0E,Move,Colde,4,84.769,0.373,0.264,2.08e-06,0.226,0.155,0,-7.433,9,0.442,0.713
+7LzLgdqVQhu1qe6cKAWkMP,Yayaya,Colde,4,174.643,0.633,0.075,2.96e-05,0.422,0.257,1,-4.908,1,0.717,0.761
+0Ilpk65GBe1sO2KbrzNqZH,Sunflower,Colde,4,78.029,0.655,0.127,1.11e-06,0.437,0.138,1,-6.276,2,0.824,0.666
+2hxnjoNBU4LRg0eUNVj76K,Space,Colde,4,99.963,0.325,0.18,0.168,0.203,0.054,1,-7.004,1,0.741,0.745
+6c3IzgWIRFPKPcoMj4l4bh,Lovestruck,Colde,3,92.645,0.188,0.367,1.02e-05,0.839,0.149,1,-9.625,8,0.428,0.468
+6V0cdiNRgprv11NGheX87j,String,Colde,4,173.791,0.353,0.131,0.000641,0.87,0.047,1,-8.475,7,0.409,0.591
+2Tp9N1PSuCsv6uqj7IgFWJ,Please Love Me,Colde,4,121.811,0.347,0.0987,0,0.793,0.0308,1,-10.422,4,0.183,0.634
+0VVkhGZNcJTeiuyyzCfFiA,Loss,Colde,3,105.604,0.145,0.133,0.000381,0.946,0.0313,1,-12.517,0,0.191,0.47
+0k4NtEeeoUFL4qnJG1Eedl,Wall,Colde,4,80.015,0.366,0.104,0,0.832,0.0485,1,-10.198,3,0.3,0.692
+4UyV2ZMo5NpCcO0u3xX8uB,Poem (Shhh),Colde,4,130.018,0.607,0.156,0.00109,0.751,0.0424,0,-11.151,0,0.47,0.821
+3GpGhXS8jJMRXJLOXwaJeO,Your Dog Loves You,Colde,4,101.878,0.133,0.154,2.97e-05,0.927,0.0308,1,-11.87,9,0.233,0.665
