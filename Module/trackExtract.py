@@ -3,11 +3,13 @@ class Extracter():
     def __init__(self, sp):
         self.total_songs = []
         self.sp = sp
-
-    def show_tracks(self, results):
+    
+    def show_tracks(self, results, file_name='./data/data.csv'):
+        file_name = './data/'+ file_name +'.csv'
         for i, item in enumerate(results['items']):
             track = item['track']
-            self.extract_from_each_track(track)
+            song_feature = self.extract_from_each_track(track)
+            self.save_feature_to_csv(song_feature, file_path=file_name)
 
     def extract_from_each_track(self, track):
         if self.filter_duplicate_from_id(song_id=track['id']) == True:
@@ -18,7 +20,8 @@ class Extracter():
             song_feature['name'] = song_name
             song_feature['id'] = track['id']
             song_feature['artists'] = song_artists_name
-            self.save_feature_to_csv(song_feature)
+            return song_feature
+            
         
     def filter_duplicate_from_id(self, song_id):
         if song_id not in self.total_songs:
@@ -27,8 +30,8 @@ class Extracter():
         else:
             return False
 
-    def write_csv_header(self):
-        f = csv.writer(open('./data/data.csv', "r+"))
+    def write_csv_header(self, file_path):
+        f = csv.writer(open(file_path, "w+"))
         f.writerow(["id",
                     "name",
                     "artists",
@@ -45,8 +48,8 @@ class Extracter():
                     'energy',
                     'danceability'])
 
-    def save_feature_to_csv(self, song):
-        f = csv.writer(open('./data/data.csv', "a+"))
+    def save_feature_to_csv(self, song, file_path):
+        f = csv.writer(open( file_path, "a+"))
         f.writerow([song["id"],
                     song["name"],
                     song["artists"],
