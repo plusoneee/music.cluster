@@ -1,7 +1,7 @@
 
 from Module.trackExtract import Extracter
 from Module.loads import AuthSpotify
-
+import time
 class Main():
     def __init__(self):
         sp_auth = AuthSpotify()
@@ -24,7 +24,8 @@ class Main():
             while tracks['next']:
                 tracks = self.sp.next(tracks)
                 self.m_extract.show_tracks(tracks, file_name)
-            
+                time.sleep(1)
+        
 if __name__ == '__main__':
     obj = Main()
     obj.run()
