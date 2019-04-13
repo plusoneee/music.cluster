@@ -2,7 +2,11 @@
 
 It is for automatically create feature datasets (csv) from your Spotify playlists.
 
-1. Edit the file `./Module/.env.example`, save as `./Module/.env`.
+## Before the start
+Before you start, you need to have an account of [Spotify](https://www.spotify.com/tw/).
+Next, Write your (Spotify api) personal information in file : `./Module/.env.example`.
+
+* Edit the file `./Module/.env.example`, save as `./Module/.env`.
 ```
 cp ./Module/.env.example ./Module/.env
 vim ./Module/.env
@@ -18,6 +22,10 @@ redirect_uri='http://localhost/'
 scope = 'user-library-read'
 ```
 
-2. Run `main.py`.
+## Run Run Run
+* (For python 3)
+```
+python main.py
+```
 
 * More about features at [spotipy](https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/)
