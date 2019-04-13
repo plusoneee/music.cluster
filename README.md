@@ -15,11 +15,11 @@ python-dotenv
 Edit the file `Module/.env.example`, save as `Module/.env`; Run:
 ```
 cp Module/.env.example Module/.env
-vim ./Module/.env
+vim Module/.env
 ```
 
 ```
-# ./Module/.env
+# Module/.env
 username = 'my_user_name'
 password = 'my_spotify_password'
 client_id = 'my_client_id'
