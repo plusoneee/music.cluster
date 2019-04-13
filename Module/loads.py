@@ -14,7 +14,6 @@ class AuthSpotify(object):
         self.client_id = os.getenv("client_id")
 
     def spotify_auth(self):
-
         
         scope = os.getenv("scope")
         try:
