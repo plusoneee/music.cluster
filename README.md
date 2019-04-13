@@ -9,12 +9,12 @@ python-dotenv
 ```
 
 ## Before the start
-* You need to have an account of [Spotify](https://www.spotify.com/tw/).
-* Next, write your (Spotify api) personal information in file : `./Module/.env.example`.
+* You need to have an account of [Spotify](https://www.spotify.com/tw/), and then create your Playlist(s).
+* Next, Write your (Spotify api) personal information in file : `Module/.env.example`.
 
-* Edit the file `./Module/.env.example`, save as `./Module/.env`.
+Edit the file `Module/.env.example`, save as `Module/.env`; Run:
 ```
-cp ./Module/.env.example ./Module/.env
+cp Module/.env.example Module/.env
 vim ./Module/.env
 ```
 
