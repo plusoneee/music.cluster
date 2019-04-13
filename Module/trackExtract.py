@@ -11,6 +11,7 @@ class Extracter():
             song_feature = self.extract_from_each_track(track)
             self.save_feature_to_csv(song_feature, file_path=file_name)
         print(' OK , saved to path: ' + file_name)
+
     def extract_from_each_track(self, track):
         if self.filter_duplicate_from_id(song_id=track['id']) == True:
             song_id = track['id']
@@ -21,7 +22,6 @@ class Extracter():
             song_feature['id'] = track['id']
             song_feature['artists'] = song_artists_name
             return song_feature
-            
         
     def filter_duplicate_from_id(self, song_id):
         if song_id not in self.total_songs:

@@ -1,14 +1,14 @@
 
 from Module.trackExtract import Extracter
-from Module.loads import spotify_auth
+from Module.loads import AuthSpotify
 
 class Main():
-
     def __init__(self):
-        self.sp = spotify_auth()
-        self.playlists = self.sp.user_playlists('plusoneee')
+        sp_auth = AuthSpotify()
+        self.user_name = sp_auth.username
+        self.sp = sp_auth.spotify_auth()
+        self.playlists = self.sp.user_playlists(self.user_name)
         self.m_extract = Extracter(self.sp)
-        
 
     def run(self):
         self.extrack_each_song_by_extracter()
@@ -18,7 +18,7 @@ class Main():
             file_name = item['name']
             file_path = './data/'+ file_name + '.csv'
             self.m_extract.write_csv_header(file_path)
-            results = self.sp.user_playlist('plusoneee', item['id'], fields="tracks, next")
+            results = self.sp.user_playlist(self.user_name, item['id'], fields="tracks, next")
             tracks = results['tracks']
             self.m_extract.show_tracks(tracks, file_name)
             while tracks['next']:
