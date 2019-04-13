@@ -9,8 +9,8 @@ python-dotenv
 ```
 
 ## Before the start
-Before you start, you need to have an account of [Spotify](https://www.spotify.com/tw/).
-Next, Write your (Spotify api) personal information in file : `./Module/.env.example`.
+* You need to have an account of [Spotify](https://www.spotify.com/tw/).
+* Next, write your (Spotify api) personal information in file : `./Module/.env.example`.
 
 * Edit the file `./Module/.env.example`, save as `./Module/.env`.
 ```
