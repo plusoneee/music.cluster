@@ -1,6 +1,8 @@
 # m.cluster
 
-* Edit the file `./lib/.env.example`, save as `.lib/.env`.
+It is for automatically create feature datasets (csv) from your Spotify playlists.
+
+1. Edit the file `./lib/.env.example`, save as `.lib/.env`.
 ```
 cp ./lib/.env.example .lib/.env
 vim .lib/.env
@@ -16,6 +18,7 @@ redirect_uri='http://localhost/'
 scope = 'user-library-read'
 ```
 
-* Run `main.py`.
+2. Run `main.py`.
 
-* Music feature from [spotipy](https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/)
+
+* More about features at [spotipy](https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/)
