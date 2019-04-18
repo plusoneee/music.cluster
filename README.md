@@ -1,6 +1,8 @@
 # m.cluster
 
-It is for automatically create feature datasets (csv) from your Spotify playlists.
+* It is for automatically create feature datasets (csv) from your Spotify playlists.
+
+* [Cluster](music.cluster/Cluster/) is for (two) playlists csv file clustering with K-mean.
 
 ## Python3 Requirments
 ```
