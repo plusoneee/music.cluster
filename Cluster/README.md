@@ -9,7 +9,7 @@ sklearn
 ```
 
 ## Run run run
-How to use : [main.py](Cluster/main.py) .
+How to use : [main.py](./main.py) .
 
 * Run directly: 
 ```
