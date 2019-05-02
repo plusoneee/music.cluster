@@ -1,5 +1,9 @@
 from loads import AuthSpotify
 import time
+
+'''
+This file is for `Get Artist data`.
+'''
 class ArtistEtrackt():
     # Get Artist Information
     def artist_info(self, sp, artist_id):
