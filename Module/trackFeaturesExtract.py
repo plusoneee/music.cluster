@@ -46,7 +46,8 @@ class Extracter():
                     'loudness',
                     'key',
                     'energy',
-                    'danceability'])
+                    'danceability',
+                    'preview_url'])
 
     def save_feature_to_csv(self, song, file_path):
         f = csv.writer(open( file_path, "a+"))
@@ -64,4 +65,5 @@ class Extracter():
                     song['loudness'],
                     song['key'],
                     song['energy'],
-                    song['danceability']])
+                    song['danceability'],
+                    song['preview_url']])
