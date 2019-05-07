@@ -14,6 +14,7 @@ class ArtistEtrackt(object):
     # Get Artist Information
     def artist_info(self, sp, artist_id):
         results = sp.artist(artist_id)
+        
         '''
         name = results['name']
         artist_id = results['id']
@@ -24,7 +25,7 @@ class ArtistEtrackt(object):
         self.info_data['name'] = results['name']
         self.info_data['id'] = results['id']
         self.info_data['genres'] = str(results['genres'])
-
+        self.info_data['imag_url'] = results['images'][0]['url']
         return (self.info_data)
 
     # Get Artist Albums
