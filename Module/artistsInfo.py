@@ -14,7 +14,6 @@ class ArtistEtrackt(object):
     # Get Artist Information
     def artist_info(self, sp, artist_id):
         results = sp.artist(artist_id)
-        
         '''
         name = results['name']
         artist_id = results['id']
@@ -25,7 +24,7 @@ class ArtistEtrackt(object):
         self.info_data['name'] = results['name']
         self.info_data['id'] = results['id']
         self.info_data['genres'] = str(results['genres'])
-        self.info_data['imag_url'] = results['images'][0]['url']
+        self.info_data['img_url'] = results['images'][0]['url']
         return (self.info_data)
 
     # Get Artist Albums
@@ -46,10 +45,13 @@ class ArtistEtrackt(object):
             data['preview_url'] = item['external_urls']['spotify']
             data['tracks_number'] = item['total_tracks']
             data['release_date'] = item['release_date']
-            data['img_url'] = item['images'][0]['url']
+            try:
+                data['img_url'] = item['images'][0]['url']
+            except:
+                 data['img_url'] = ''
             data['artist_id'] = artist_id
             self.albums_list.append(data)
-
+            # print(self.albums_list)
         return self.albums_list
 
 
@@ -73,6 +75,7 @@ class ArtistEtrackt(object):
             data['artist_id'] = item['artists'][0]['id']
             data['track_path'] = ''
             data['sentiment'] = ''
+            data['preview_url'] = item['preview_url']
             '''
             get audio features from track Id
             '''

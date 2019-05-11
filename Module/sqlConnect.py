@@ -20,18 +20,17 @@ class SQLConnect(object):
         self.table_name = table_name
 
     def insert_into_table(self, data_dic):
-        try:
-            insert_query = "INSERT INTO {tablename} ({columns}) VALUES {values};" .format(
-                tablename=self.table_name,
-                columns=', '.join(data_dic.keys()),
-                values=tuple(data_dic.values())
-            )
-            print(insert_query)
-            self.cursor.execute(insert_query)
-            self.db.commit()
-            print("Inserted completely")
-        except:
-            print('Duplicate')
+    
+        insert_query = "INSERT INTO {tablename} ({columns}) VALUES {values};" .format(
+            tablename=self.table_name,
+            columns=', '.join(data_dic.keys()),
+            values=tuple(data_dic.values())
+        )
+        print(insert_query)
+        self.cursor.execute(insert_query)
+        self.db.commit()
+        print("Inserted completely")
+    
 
     def delete_table_data_from_id(self, id):
         '''
