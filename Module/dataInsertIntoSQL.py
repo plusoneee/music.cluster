@@ -1,11 +1,11 @@
 from sqlConnect import SQLConnect
 from loads import AuthSpotify
-from artistsInfo import ArtistEtrackt
+from artistsInfo import ArtistExtract
 
 if __name__ == '__main__':
     sp_auth = AuthSpotify()
     sp = sp_auth.spotify_auth()
-    artist = ArtistEtrackt()
+    artist = ArtistExtract()
     
     '''
     insert Artist data into table

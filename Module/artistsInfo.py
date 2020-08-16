@@ -4,7 +4,8 @@ import time
 This file is for `Get Artist data`.
 How to use ? please refer to file : dataInsertIntoSQL.py
 '''
-class ArtistEtrackt(object):
+
+class ArtistExtract(object):
 
     def __init__(self):
         self.info_data = {}
