@@ -1,6 +1,6 @@
 from sqlConnect import SQLConnect
 from loads import AuthSpotify
-from artistsInfo import Artist
+from artist_info import Artist
 
 if __name__ == '__main__':
     sp_auth = AuthSpotify()

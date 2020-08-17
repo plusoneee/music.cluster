@@ -3,7 +3,7 @@ import time
 
 '''
 This file is for `Get Artist data`.
-How to use ? please refer to file : dataInsertIntoSQL.py
+How to use ? please refer to file : data_insert_into_sql.py
 '''
 
 
