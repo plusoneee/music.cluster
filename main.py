@@ -1,7 +1,8 @@
 
-from Module.trackExtract import Extracter
+from Module.trackFeaturesExtract import Extracter
 from Module.loads import AuthSpotify
 import time
+
 class Main():
     def __init__(self):
         sp_auth = AuthSpotify()
@@ -29,7 +30,6 @@ class Main():
 if __name__ == '__main__':
     obj = Main()
     obj.run()
-    
-    
+
     
    

@@ -1,19 +1,25 @@
 from loads import AuthSpotify
 import time
+
 '''
 This file is for `Get Artist data`.
 How to use ? please refer to file : dataInsertIntoSQL.py
 '''
 
-class ArtistExtract(object):
 
+class Artist:
     def __init__(self):
         self.info_data = {}
         self.albums_list = []
         self.tracks_list = []
 
     # Get Artist Information
-    def artist_info(self, sp, artist_id):
+    @staticmethod
+    def artist_info(sp=None, artist_id=None):
+
+        if sp is None:
+            return  -1
+
         results = sp.artist(artist_id)
         '''
         name = results['name']
@@ -22,15 +28,23 @@ class ArtistExtract(object):
         artist_spotify_url = results['external_urls']['spotify']
         artist_tyep = results['type']
         '''
-        self.info_data['name'] = results['name']
-        self.info_data['id'] = results['id']
-        self.info_data['genres'] = str(results['genres'])
-        self.info_data['img_url'] = results['images'][0]['url']
-        return (self.info_data)
 
-    # Get Artist Albums
-    def get_artist_albums(self, sp, artist_id):
+        artist = Artist()
+        artist.info_data['name'] = results['name']
+        artist.info_data['id'] = results['id']
+        artist.info_data['genres'] = str(results['genres'])
+        artist.info_data['img_url'] = results['images'][0]['url']
+        return (artist.info_data)
+
+    @staticmethod
+    def get_artist_albums(sp=None, artist_id=None):
+
+        if sp is None:
+            return -1
+
         results = sp.artist_albums(artist_id)
+        artist = Artist()
+
         for item in results['items']:
             data = {}
             '''
@@ -51,14 +65,23 @@ class ArtistExtract(object):
             except:
                  data['img_url'] = ''
             data['artist_id'] = artist_id
-            self.albums_list.append(data)
+
+            artist.albums_list.append(data)
             # print(self.albums_list)
-        return self.albums_list
+
+        return artist.albums_list
 
 
     # Get Album's Tracks from Album ID
-    def get_tracks_from_albums(self, sp, album_id):
+    @staticmethod
+    def get_tracks_from_albums(sp=None, album_id=None):
+
+        if sp is None:
+            return  -1
+
         results = sp.album_tracks(album_id)
+        artis = Artist()
+
         for item in results['items']:
             data = {}
             '''
@@ -91,14 +114,13 @@ class ArtistExtract(object):
             data['liveness'] = features[0]['liveness']
             data['valence'] = features[0]['valence']
             data['tempo'] = features[0]['tempo']
-            self.tracks_list.append(data)
-        return self.tracks_list
+
+            artis.tracks_list.append(data)
+
+        return artis.tracks_list
 
     # Get Artist's Related Artists
     def related_artists(self, sp, artist_id):
         results = sp.artist_related_artists(artist_id)
-        related_id = [ artist['id'] for artist in results['artists'] ]
-        print(related_id)
-
-
-    
+        related_id = [artist['id'] for artist in results['artists']]
+        return  related_id

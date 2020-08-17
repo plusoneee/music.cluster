@@ -8,6 +8,7 @@
 ```
 spotipy
 python-dotenv
+mysql-connector-python
 ```
 
 ## Before the start
