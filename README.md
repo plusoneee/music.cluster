@@ -1,10 +1,10 @@
-# m.cluster
+# music.cluster
 
 * It is for automatically create feature datasets (csv) from your Spotify playlists.
 
 * [Cluster](./Cluster/) is for (two) playlists csv file clustering with K-mean.
 
-## Python3 Requirments
+## Python3 Requirement
 ```
 spotipy
 python-dotenv
