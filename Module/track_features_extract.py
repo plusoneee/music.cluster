@@ -10,8 +10,10 @@ class Extracter():
             track = item['track']
             song_feature = self.extract_from_each_track(track)
             self.save_feature_to_csv(song_feature, file_path=file_name)
-        print(' * Playlist has saved at : ' + file_name)
-
+        print(' ')
+        print(' * Playlist was saved at : ' + file_name)
+        print(' ')
+    
     def extract_from_each_track(self, track):
         if self.filter_duplicate_from_id(song_id=track['id']) == True:
             song_id = track['id']

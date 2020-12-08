@@ -31,11 +31,14 @@ redirect_uri='http://localhost/'
 scope = 'user-library-read'
 ```
 
-## Run run run
+## Run
 * (For python 3)
 ```
 python main.py
 ```
 
+![](./img/demo.gif)
+
 ## About:
+
 * More about Audio features at [spotipy](https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/)
